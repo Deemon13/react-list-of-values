@@ -12,7 +12,13 @@ export const App = () => {
 	const isValueValid = value.length >= 3;
 
 	const onInputButtonClick = () => {
-		const promptValue = prompt();
+		const promptValue = prompt().trim();
+
+		console.log(promptValue);
+
+		if (promptValue === null) {
+			return;
+		}
 
 		if (promptValue.length < 3) {
 			setError(ERROR_TEXT);
@@ -66,9 +72,14 @@ export const App = () => {
 				{list.length > 0 ? (
 					<ul className={styles.list}>
 						{list.map(el => {
+							let date = new Date(el.id)
+								.toLocaleString()
+								.replace(', ', ' ');
+							console.log(date);
+
 							return (
 								<li key={el.id} className={styles['list-item']}>
-									{el.value}
+									{`${el.value} - ${date}`}
 								</li>
 							);
 						})}
