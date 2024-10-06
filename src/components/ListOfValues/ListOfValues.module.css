@@ -14,6 +14,10 @@
 	max-width: 300px;
 }
 
-.list-item:not(:last-child) {
+/* .list-item:not(:last-child) {
 	margin-bottom: 0.5em;
+} */
+
+.no-margin-text {
+	margin: 0;
 }

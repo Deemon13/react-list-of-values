@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 
+import { Button } from '../../components';
+import { ERROR_TEXT } from '../../constants';
+
 import styles from './Controls.module.css';
 
-const ERROR_TEXT = 'Введенное значение должно содержать минимум 3 символа';
+// const ERROR_TEXT = 'Введенное значение должно содержать минимум 3 символа';
 
 export const Controls = props => {
 	const { value, setValue, list, setList, setError } = props;
-	const isValueValid = value.length >= 3;
+	// const isValueValid = value.length >= 3;
 
 	const onInputButtonClick = () => {
 		const promptValue = prompt().trim();
@@ -34,7 +37,18 @@ export const Controls = props => {
 
 	return (
 		<div className={styles['buttons-container']}>
-			<button className={styles.button} onClick={onInputButtonClick}>
+			<Button
+				onButtonClick={onInputButtonClick}
+				text="Ввести новое"
+				condition={true}
+			/>
+			<Button
+				onButtonClick={onAddButtonClick}
+				text="Добавить в список"
+				value={value}
+				condition={false}
+			/>
+			{/* <button className={styles.button} onClick={onInputButtonClick}>
 				Ввести новое
 			</button>
 			<button
@@ -43,7 +57,7 @@ export const Controls = props => {
 				disabled={!isValueValid}
 			>
 				Добавить в список
-			</button>
+			</button> */}
 		</div>
 	);
 };
@@ -52,7 +66,7 @@ Controls.propTypes = {
 	value: PropTypes.string,
 	list: PropTypes.arrayOf(
 		PropTypes.shape({
-			id: PropTypes.string.isRequired,
+			id: PropTypes.number.isRequired,
 			value: PropTypes.string,
 		}),
 	),

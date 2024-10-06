@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import { ListOfValuesItem } from '../../components';
+
 import styles from './ListOfValues.module.css';
 
 export const ListOfValues = ({ list }) => {
@@ -8,15 +10,15 @@ export const ListOfValues = ({ list }) => {
 			<h2 className={styles['list-heading']}>Список:</h2>
 			{list.length > 0 ? (
 				<ul className={styles.list}>
-					{list.map(el => {
-						let date = new Date(el.id).toLocaleString().replace(', ', ' ');
-						console.log(date);
+					{list.map(({ id, value }) => {
+						let date = new Date(id).toLocaleString().replace(', ', ' ');
 
-						return (
-							<li key={el.id} className={styles['list-item']}>
-								{`${el.value} - ${date}`}
-							</li>
-						);
+						return <ListOfValuesItem key={id} value={value} date={date} />;
+						// (
+						// 	<li key={id} className={styles['list-item']}>
+						// 		{`${value} - ${date}`}
+						// 	</li>
+						// );
 					})}
 				</ul>
 			) : (
@@ -29,7 +31,7 @@ export const ListOfValues = ({ list }) => {
 ListOfValues.propTypes = {
 	list: PropTypes.arrayOf(
 		PropTypes.shape({
-			id: PropTypes.string.isRequired,
+			id: PropTypes.number.isRequired,
 			value: PropTypes.string,
 		}),
 	),
