@@ -1,0 +1,7 @@
+.no-margin-text {
+	margin: 0;
+}
+
+.current-value {
+	font-weight: bold;
+}

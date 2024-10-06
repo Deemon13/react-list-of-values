@@ -5,26 +5,26 @@
 	padding: 20px;
 }
 
-.error {
+/* .error {
 	color: var(--error-color);
 	font-weight: bold;
-}
+} */
 
-.page-heading {
+/* .page-heading {
 	margin: 0 0 0.5rem;
 	font-size: 25px;
 	font-weight: bold;
-}
+} */
 
-.no-margin-text {
+/* .no-margin-text {
 	margin: 0;
 }
 
 .current-value {
 	font-weight: bold;
-}
+} */
 
-.buttons-container {
+/* .buttons-container {
 	margin-top: 1.5rem;
 	display: flex;
 	justify-content: center;
@@ -49,9 +49,9 @@
 
 .button:disabled {
 	background-color: var(--disabled-color);
-}
+} */
 
-.list-container {
+/* .list-container {
 	margin-top: 1.5rem;
 }
 
@@ -69,4 +69,4 @@
 
 .list-item:not(:last-child) {
 	margin-bottom: 0.5em;
-}
+} */
