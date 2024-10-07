@@ -4,7 +4,7 @@ import { ListOfValuesItem } from '../../components';
 
 import styles from './ListOfValues.module.css';
 
-export const ListOfValues = ({ list }) => {
+export const ListOfValues = ({ list, setList }) => {
 	return (
 		<div className={styles['list-container']}>
 			<h2 className={styles['list-heading']}>Список:</h2>
@@ -13,7 +13,16 @@ export const ListOfValues = ({ list }) => {
 					{list.map(({ id, value }) => {
 						let date = new Date(id).toLocaleString().replace(', ', ' ');
 
-						return <ListOfValuesItem key={id} value={value} date={date} />;
+						return (
+							<ListOfValuesItem
+								key={id}
+								id={id}
+								value={value}
+								date={date}
+								list={list}
+								setList={setList}
+							/>
+						);
 						// (
 						// 	<li key={id} className={styles['list-item']}>
 						// 		{`${value} - ${date}`}

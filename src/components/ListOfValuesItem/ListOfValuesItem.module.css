@@ -20,3 +20,7 @@
 .list-date {
 	font-style: italic;
 }
+
+.list-item i {
+	cursor: pointer;
+}

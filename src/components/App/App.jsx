@@ -85,7 +85,7 @@ export const App = () => {
 			</div> */}
 			{/* End of Controls */}
 			{/* Component - List */}
-			<ListOfValues list={list} />
+			<ListOfValues list={list} setList={setList} />
 			{/* <div className={styles['list-container']}>
 				<h2 className={styles['list-heading']}>Список:</h2>
 				{list.length > 0 ? (
