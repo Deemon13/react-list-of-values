@@ -12,11 +12,13 @@ export const Controls = props => {
 	// const isValueValid = value.length >= 3;
 
 	const onInputButtonClick = () => {
-		const promptValue = prompt().trim();
+		const promptValue = prompt();
 
 		if (promptValue === null) {
 			return;
 		}
+
+		promptValue.trim();
 
 		if (promptValue.length < 3) {
 			setError(ERROR_TEXT);

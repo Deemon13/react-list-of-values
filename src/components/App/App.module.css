@@ -3,6 +3,22 @@
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 20px;
+
+	border: 1px solid #333333;
+	border-radius: 10px;
+	box-shadow: 10px 10px 8px 2px #0000004d;
+}
+
+.error-container {
+	color: green;
+}
+
+.with-error {
+	color: red;
+}
+
+.without-error {
+	color: blue;
 }
 
 /* .error {

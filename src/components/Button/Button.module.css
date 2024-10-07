@@ -3,17 +3,21 @@
 	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
 	font-size: 18px;
 	border: none;
+	border-radius: 5px;
 	transition: background-color 0.15s ease;
 }
 
 .button:hover {
+	cursor: pointer;
 	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%);
 }
 
 .button:active {
 	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 82%);
+	transform: scale(0.9);
 }
 
 .button:disabled {
+	cursor: initial;
 	background-color: var(--disabled-color);
 }

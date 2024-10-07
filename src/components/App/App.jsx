@@ -54,7 +54,10 @@ export const App = () => {
 			<Output value={value} />
 			{/* End of Output */}
 			{/* Component - Error */}
-			{error && <Error error={error} />}
+			<div className={styles[`error-container`]}>
+				{error && <Error error={error} />}
+			</div>
+
 			{/* {error && <div className={styles.error}>{error}</div>} */}
 			{/* End of Error */}
 			{/* Component - Controls */}
