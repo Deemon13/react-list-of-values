@@ -44,4 +44,5 @@ ListOfValues.propTypes = {
 			value: PropTypes.string,
 		}),
 	),
+	setList: PropTypes.func,
 };

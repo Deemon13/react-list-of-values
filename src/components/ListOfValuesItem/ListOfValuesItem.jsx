@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 import styles from './ListOfValuesItem.module.css';
 
 export const ListOfValuesItem = ({ id, value, date, list, setList }) => {
-	console.log(list);
+	// console.log(typeof id);
+
+	// console.log(list);
 
 	const onTrashClick = event => {
 		const itemID = Number(event.target.parentNode.id);
 		const newList = list.filter(el => el.id !== itemID);
-		console.log(event);
-		console.log(itemID);
+		// console.log(event);
+		// console.log(itemID);
 
-		console.log(newList);
+		// console.log(newList);
 
 		const updatedList = [...newList];
 		setList(updatedList);
@@ -27,6 +29,14 @@ export const ListOfValuesItem = ({ id, value, date, list, setList }) => {
 };
 
 ListOfValuesItem.propTypes = {
+	id: PropTypes.number.isRequired,
 	value: PropTypes.string,
 	date: PropTypes.string,
+	list: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.number.isRequired,
+			value: PropTypes.string,
+		}),
+	),
+	setList: PropTypes.func,
 };
