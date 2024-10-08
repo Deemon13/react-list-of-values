@@ -3,17 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './ListOfValuesItem.module.css';
 
 export const ListOfValuesItem = ({ id, value, date, list, setList }) => {
-	// console.log(typeof id);
-
-	// console.log(list);
-
 	const onTrashClick = event => {
 		const itemID = Number(event.target.parentNode.id);
 		const newList = list.filter(el => el.id !== itemID);
-		// console.log(event);
-		// console.log(itemID);
-
-		// console.log(newList);
 
 		const updatedList = [...newList];
 		setList(updatedList);

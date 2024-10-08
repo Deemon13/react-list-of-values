@@ -23,11 +23,6 @@ export const ListOfValues = ({ list, setList }) => {
 								setList={setList}
 							/>
 						);
-						// (
-						// 	<li key={id} className={styles['list-item']}>
-						// 		{`${value} - ${date}`}
-						// 	</li>
-						// );
 					})}
 				</ul>
 			) : (

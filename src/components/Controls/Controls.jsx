@@ -5,11 +5,8 @@ import { ERROR_TEXT } from '../../constants';
 
 import styles from './Controls.module.css';
 
-// const ERROR_TEXT = 'Введенное значение должно содержать минимум 3 символа';
-
 export const Controls = props => {
 	const { value, setValue, list, setList, setError } = props;
-	// const isValueValid = value.length >= 3;
 
 	const onInputButtonClick = () => {
 		const promptValue = prompt();
@@ -50,16 +47,6 @@ export const Controls = props => {
 				value={value}
 				condition={false}
 			/>
-			{/* <button className={styles.button} onClick={onInputButtonClick}>
-				Ввести новое
-			</button>
-			<button
-				className={styles.button}
-				onClick={onAddButtonClick}
-				disabled={!isValueValid}
-			>
-				Добавить в список
-			</button> */}
 		</div>
 	);
 };
